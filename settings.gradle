@@ -16,3 +16,6 @@ rootProject.name = "Lassi"
 include ':app'
 include ':data'
 include ':ui-components'
+include ':credit-score'
+include ':resources'
+include ':resources:strings'

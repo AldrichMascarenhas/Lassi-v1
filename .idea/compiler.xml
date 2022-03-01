@@ -3,6 +3,8 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="Lassi.app" target="11" />
+      <module name="Lassi.credit-score" target="11" />
+      <module name="Lassi.resources.strings" target="11" />
       <module name="Lassi.ui-components" target="11" />
     </bytecodeTargetLevel>
   </component>
