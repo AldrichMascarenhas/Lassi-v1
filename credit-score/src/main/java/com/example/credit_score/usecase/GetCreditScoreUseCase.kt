@@ -1,7 +1,7 @@
 package com.example.credit_score.usecase
 
 import com.example.credit_score_data.domain.model.CreditScoreData
-import com.example.credit_score_data.domain.repository.CreditScoreRepository
+import com.example.credit_score_data.domain.CreditScoreRepository
 import com.example.credit_score_data.domain.response.GetCreditScoreResponse
 
 class GetCreditScoreUseCase(

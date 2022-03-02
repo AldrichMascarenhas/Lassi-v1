@@ -1,6 +1,7 @@
 package com.example.credit_score_data.domain.repository
 
 import com.example.credit_score_data.datasource.CreditScoreDataSource
+import com.example.credit_score_data.domain.CreditScoreRepository
 import com.example.credit_score_data.domain.response.GetCreditScoreResponse
 
 internal class CreditScoreRepositoryImpl(

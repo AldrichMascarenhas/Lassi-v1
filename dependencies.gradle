@@ -22,7 +22,9 @@ ext {
     // Networking
     okhttp_version = '4.9.3'
     retrofit_version = "2.9.0"
+
     // Testing
     junit_version = '4.13.2'
+    mock_version = '1.12.3'
 
 }

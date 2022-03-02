@@ -22,7 +22,7 @@ android {
     }
     compileOptions {
         sourceCompatibility compile_source_compatibility
-                targetCompatibility compile_target_compatibility
+        targetCompatibility compile_target_compatibility
 
     }
     kotlinOptions {
@@ -42,10 +42,9 @@ dependencies {
     implementation project(":common-core")
     implementation project(":data:credit-score-data")
 
-
-
     testImplementation "junit:junit:$junit_version"
-    testImplementation "io.mockk:mockk:1.12.3"
-    testImplementation"org.orbit-mvi:orbit-test:$orbit_version"
-    testImplementation "io.mockk:mockk-agent-jvm:1.12.3"
+    testImplementation "org.orbit-mvi:orbit-test:$orbit_version"
+
+    testImplementation "io.mockk:mockk:$mock_version"
+    testImplementation "io.mockk:mockk-agent-jvm:$mock_version"
 }
