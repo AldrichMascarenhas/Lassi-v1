@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <Space
+        android:id="@+id/spaceTop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/layContent"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintHeight_max="@dimen/collection_view_max_space_top"
+        app:layout_constraintHeight_min="@dimen/space_x4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Image container - depending on type app:animSrc should be a raw lottie res or app:img drawable -->
+    <FrameLayout
+        android:id="@+id/layImageHolder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/collection_view_image_margin"
+        android:layout_marginEnd="@dimen/collection_view_image_margin"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spaceTop"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.airbnb.lottie.LottieAnimationView
+            app:lottie_imageAssetsFolder="images"
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:lottie_loop="false"
+            app:lottie_progress="0.1" />
+    </FrameLayout>
+
+    <!-- Content -->
+    <LinearLayout
+        android:id="@+id/layContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_x6"
+        android:layout_marginEnd="@dimen/space_x6"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layImageHolder"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <TextView
+            android:id="@+id/textviewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_x2"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textStyle="bold"
+            tools:maxLines="2"
+            tools:text="@tools:sample/lorem/random" />
+
+        <TextView
+            android:id="@+id/textviewSubTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:maxLines="4"
+            tools:text="@tools:sample/lorem/random" />
+    </LinearLayout>
+
+
+    <!-- Bottom space -->
+    <Space
+        android:id="@+id/spaceBottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintHeight_min="@dimen/space_x8"
+        app:layout_constraintTop_toBottomOf="@id/layContent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintVertical_chainStyle="packed" />
+</merge>

@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdkVersion compile_sdk_version
+
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility compile_source_compatibility
+        targetCompatibility compile_target_compatibility
+    }
+    kotlinOptions {
+        jvmTarget = kotlin_jvm_target
+    }
+}
+
+dependencies {
+
+    // Android
+    api "androidx.core:core-ktx:$androidx_core_ktx_version"
+    api "androidx.appcompat:appcompat:$androidx_appcompat_version"
+
+    // Navigation
+    api "androidx.navigation:navigation-fragment-ktx:$androidx_nav_version"
+    api"androidx.navigation:navigation-ui-ktx:$androidx_nav_version"
+
+    // Koin
+    api("io.insert-koin:koin-core:$koin_version")
+    api("io.insert-koin:koin-android:$koin_version")
+    api("io.insert-koin:koin-android-compat:$koin_version")
+    testImplementation "io.insert-koin:koin-test:$koin_version"
+
+    // Coroutines
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+
+    // MVI Orbit
+    api "org.orbit-mvi:orbit-viewmodel:$orbit_version"
+    testImplementation"org.orbit-mvi:orbit-test:$orbit_version"
+
+    //https://github.com/Zhuinden/fragmentviewbindingdelegate-kt
+    api "com.github.Zhuinden:fragmentviewbindingdelegate-kt:$fragmentviewbindingdelegate_version"
+
+}

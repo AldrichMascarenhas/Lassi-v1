@@ -3,7 +3,7 @@
     <item
         android:id="@+id/creditScore"
         android:enabled="true"
-        android:icon="@android:drawable/btn_dropdown"
-        android:title="Score"/>
+        android:icon="@drawable/ic_baseline_show_chart_24"
+        android:title="@string/feature_credit_score_hub"/>
 
 </menu>

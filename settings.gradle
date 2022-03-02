@@ -1,8 +1,8 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
@@ -10,12 +10,29 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 }
 rootProject.name = "Lassi"
+
 include ':app'
-include ':data'
+
+// Common
+include ':common-core'
+
+// UI
 include ':ui-components'
+
+// Features
 include ':credit-score'
+
+// Resources
 include ':resources'
 include ':resources:strings'
+include ':resources:drawables'
+
+
+// Data
+include ':data'
+include ':data:credit-score-data'
+include ':data:common-data'

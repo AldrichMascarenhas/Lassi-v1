@@ -6,6 +6,21 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.6.10' apply false
 }
 
+apply from: "dependencies.gradle"
+
+// Define versions in a single place
+ext {
+    // Android Sdk and tools
+    min_sdk_version = 24
+    target_sdk_version = 31
+    compile_sdk_version = 31
+
+    kotlin_jvm_target = '1.8'
+
+    compile_source_compatibility = JavaVersion.VERSION_1_8
+    compile_target_compatibility = JavaVersion.VERSION_1_8
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

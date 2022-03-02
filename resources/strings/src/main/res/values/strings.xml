@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Feature Names -->
+    <string name="feature_credit_score_hub">Credit Score</string>
+    <!-- Credit Score Module -->
+    <!-- Credit Score Hub -->
+    <string name="credit_score_hub_widget_title">Your credit score is</string>
+    <string name="credit_score_hub_widget_subtitle">out of %d</string>
+
+    <!-- Error Strings-->
+    <string name="generic_error_title">Something has gone wrong.</string>
+    <string name="generic_error_subtitle">There was an error. Please try again!</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="no_internet_body">Please check your network connection and try again.</string>
+</resources>

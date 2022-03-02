@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdkVersion compile_sdk_version
+
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField 'String', 'BASE_ENDPOINT', "\"https://android-interview.s3.eu-west-2.amazonaws.com\""
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'BASE_ENDPOINT', "\"https://android-interview.s3.eu-west-2.amazonaws.com\""
+        }
+    }
+    compileOptions {
+        sourceCompatibility compile_source_compatibility
+        targetCompatibility compile_target_compatibility
+    }
+    kotlinOptions {
+        jvmTarget = kotlin_jvm_target
+    }
+}
+
+dependencies {
+    
+    implementation project(":common-core")
+    
+    // Networking Libraries
+    api("com.squareup.okhttp3:okhttp:$okhttp_version")
+    api("com.squareup.retrofit2:retrofit:$retrofit_version")
+    api("com.squareup.okhttp3:logging-interceptor:$okhttp_version")
+    api("com.squareup.retrofit2:converter-gson:$retrofit_version")
+}

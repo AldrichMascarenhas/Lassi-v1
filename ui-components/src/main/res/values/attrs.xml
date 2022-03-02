@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Reused component attributes -->
+    <attr name="title" format="string" />
+    <attr name="subtitle" format="string" />
+
+    <!-- DonutIndicator -->
+    <declare-styleable name="DonutIndicator">
+        <attr name="title" />
+        <attr name="subtitle" />
+        <attr name="value" format="integer" />
+    </declare-styleable>
+
+    <!-- Collection view -->
+    <declare-styleable name="CollectionView">
+        <attr name="title" />
+        <attr name="subtitle" />
+        <attr name="animSrc" format="reference" />
+    </declare-styleable>
+</resources>

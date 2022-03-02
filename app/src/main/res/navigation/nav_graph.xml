@@ -7,8 +7,7 @@
 
     <fragment
         android:id="@+id/creditScore"
-        android:name="com.example.credit_score.CreditScoreFragment"
-        app:moduleName="myDynamicFeature"
-        tools:layout="@layout/fragment_credit_score" />
+        android:name="com.example.credit_score.ui.credit_score_hub.CreditScoreHubFragment"
+        tools:layout="@layout/fragment_credit_score_hub" />
 
 </navigation>
