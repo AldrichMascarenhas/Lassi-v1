@@ -30,7 +30,10 @@ class CreditScoreHubFragment : Fragment(R.layout.fragment_credit_score_hub) {
     private fun render(state: CreditScoreHubState) {
         when (state.creditScoreLoadingState) {
 
-           is CreditScoreLoadingState.Error -> handleErrorState(state.creditScoreLoadingState.title, state.creditScoreLoadingState.description)
+            is CreditScoreLoadingState.Error -> handleErrorState(
+                state.creditScoreLoadingState.title,
+                state.creditScoreLoadingState.description
+            )
             CreditScoreLoadingState.Loading -> {
                 binding.apply {
                     creditScoreIndicator.isVisible = false
@@ -46,19 +49,13 @@ class CreditScoreHubFragment : Fragment(R.layout.fragment_credit_score_hub) {
                     errorContainer.isVisible = false
 
                     creditScoreIndicator.apply {
-                        indicator.max =
-                            state.creditScoreLoadingState.creditScoreData.maxScoreValue
-                        indicator.setProgress(
-                            state.creditScoreLoadingState.creditScoreData.score.toInt(),
-                            true
-                        )
-                        title.text = getString(RS.string.credit_score_hub_widget_title)
-                        subtitle.text = getString(
-                            RS.string.credit_score_hub_widget_subtitle,
-                            state.creditScoreLoadingState.creditScoreData.maxScoreValue
-                        )
-                        value.text =
-                            state.creditScoreLoadingState.creditScoreData.score
+                        state.creditScoreLoadingState.creditScoreHubData.let {
+                            indicator.max = it.maxScoreValue
+                            indicator.setProgress(it.score, true)
+                            title.text = state.creditScoreLoadingState.creditScoreHubData.title
+                            subtitle.text = it.subtitle
+                            value.text = it.value
+                        }
                     }
                 }
             }

@@ -5,9 +5,10 @@ import com.example.credit_score_data.domain.model.CreditScoreData
 
 internal class CreditScoreAPIMapper {
 
-    fun map(creditData: CreditData) : CreditScoreData {
+    fun map(creditData: CreditData): CreditScoreData {
         return CreditScoreData(
-            score = creditData.creditReportInfo.score.toString(), maxScoreValue = creditData.creditReportInfo.maxScoreValue
+            score = creditData.creditReportInfo.score,
+            maxScoreValue = creditData.creditReportInfo.maxScoreValue
 
         )
     }

@@ -45,5 +45,7 @@ dependencies {
 
 
     testImplementation "junit:junit:$junit_version"
-
+    testImplementation "io.mockk:mockk:1.12.3"
+    testImplementation"org.orbit-mvi:orbit-test:$orbit_version"
+    testImplementation "io.mockk:mockk-agent-jvm:1.12.3"
 }

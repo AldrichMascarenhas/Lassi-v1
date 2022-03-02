@@ -1,6 +1,7 @@
 package com.example.credit_score.ui.credit_score_hub
 
 import androidx.annotation.StringRes
+import com.example.credit_score.model.CreditScoreHubData
 import com.example.credit_score_data.domain.model.CreditScoreData
 
 data class CreditScoreHubState(
@@ -14,5 +15,5 @@ sealed class CreditScoreLoadingState {
         @StringRes val description: Int
     ) : CreditScoreLoadingState()
 
-    data class Success(val creditScoreData: CreditScoreData) : CreditScoreLoadingState()
+    data class Success(val creditScoreHubData: CreditScoreHubData) : CreditScoreLoadingState()
 }

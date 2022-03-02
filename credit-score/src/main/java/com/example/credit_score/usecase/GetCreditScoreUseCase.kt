@@ -11,7 +11,9 @@ class GetCreditScoreUseCase(
         return when (val creditScoreResponse = creditScoreRepository.getCreditScore()) {
             GetCreditScoreResponse.NoInternet -> GetCreditScoreResult.NoInternet
             GetCreditScoreResponse.ServerError -> GetCreditScoreResult.ServerError
-            is GetCreditScoreResponse.Success -> GetCreditScoreResult.Success(creditScoreData = creditScoreResponse.creditScoreData)
+            is GetCreditScoreResponse.Success -> {
+                GetCreditScoreResult.Success(creditScoreResponse.creditScoreData)
+            }
         }
     }
 }
