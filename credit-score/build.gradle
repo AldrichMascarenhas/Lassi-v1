@@ -10,7 +10,7 @@ android {
         minSdkVersion min_sdk_version
         targetSdkVersion target_sdk_version
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.lassi.base.LassiTestRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -47,4 +47,5 @@ dependencies {
 
     testImplementation "io.mockk:mockk:$mock_version"
     testImplementation "io.mockk:mockk-agent-jvm:$mock_version"
+
 }

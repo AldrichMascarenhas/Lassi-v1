@@ -6,6 +6,7 @@
     <!-- Credit Score Hub -->
     <string name="credit_score_hub_widget_title">Your credit score is</string>
     <string name="credit_score_hub_widget_subtitle">out of %d</string>
+    <string name="credit_score_hub_widget_retry">Retry</string>
 
     <!-- Error Strings-->
     <string name="generic_error_title">Something has gone wrong.</string>

@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <com.example.ui_components.DonutIndicator
+        android:visibility="gone"
         android:id="@+id/creditScoreIndicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <com.example.ui_components.CollectionView
             android:id="@+id/errorCollectionView"
@@ -47,7 +48,7 @@
             android:layout_marginStart="@dimen/margin_default"
             android:layout_marginEnd="@dimen/margin_default"
             android:layout_marginBottom="@dimen/space_x4"
-            android:text="Retry"
+            android:text="@string/credit_score_hub_widget_retry"
             app:iconGravity="textStart"
             app:iconPadding="@dimen/space_x4"
             app:iconTint="?colorPrimary"
@@ -66,9 +67,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <ProgressBar
+
             style="@android:style/Widget.Material.ProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

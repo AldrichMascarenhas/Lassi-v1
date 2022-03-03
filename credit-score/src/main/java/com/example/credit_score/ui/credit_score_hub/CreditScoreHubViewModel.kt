@@ -14,7 +14,9 @@ import org.orbitmvi.orbit.viewmodel.container
 class CreditScoreHubViewModel(
     private val getCreditScoreUseCase: GetCreditScoreUseCase,
     private val creditScoreMapper: CreditScoreMapper
-) : ContainerHost<CreditScoreHubState, Nothing>, ViewModel() {
+) : ContainerHost<CreditScoreHubState, Nothing>, ViewModel(
+
+) {
 
     override val container =
         container<CreditScoreHubState, Nothing>(CreditScoreHubState())
@@ -25,8 +27,7 @@ class CreditScoreHubViewModel(
         }
     }
 
-    private fun fetchCreditScore() = intent {
-        delay(1000) // False delay to show loading
+    private fun fetchCreditScore() = intent(registerIdling = false) {
         reduce { state.copy(creditScoreLoadingState = CreditScoreLoadingState.Loading) }
         when (val response = getCreditScoreUseCase.invoke()) {
             GetCreditScoreResult.NoInternet -> reduce {
