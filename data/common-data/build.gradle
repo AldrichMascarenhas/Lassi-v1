@@ -45,6 +45,4 @@ dependencies {
     api("com.squareup.okhttp3:logging-interceptor:$okhttp_version")
     api("com.squareup.retrofit2:converter-gson:$retrofit_version")
 
-    testImplementation("com.squareup.okhttp3:mockwebserver:4.9.3")
-
 }

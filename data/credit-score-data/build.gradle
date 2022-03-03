@@ -37,11 +37,9 @@ dependencies {
     implementation project(":common-core")
     implementation project(":data:common-data")
 
-    testImplementation "junit:junit:$junit_version"
-    testImplementation "io.mockk:mockk:$mock_version"
-    testImplementation "io.mockk:mockk-agent-jvm:$mock_version"
-
-    testImplementation("com.squareup.okhttp3:mockwebserver:4.9.3")
-
+    testImplementation("junit:junit:$junit_version")
+    testImplementation("io.mockk:mockk:$mock_version")
+    testImplementation("io.mockk:mockk-agent-jvm:$mock_version")
+    testImplementation("com.squareup.okhttp3:mockwebserver:$mock_web_server")
 
 }

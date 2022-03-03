@@ -53,7 +53,6 @@ dependencies {
     api "org.orbit-mvi:orbit-viewmodel:$orbit_version"
     testImplementation"org.orbit-mvi:orbit-test:$orbit_version"
 
-    //https://github.com/Zhuinden/fragmentviewbindingdelegate-kt
     api "com.github.Zhuinden:fragmentviewbindingdelegate-kt:$fragmentviewbindingdelegate_version"
 
 }

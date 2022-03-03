@@ -23,5 +23,4 @@
     <dimen name="collection_view_max_space_top">24dp</dimen>
     <dimen name="collection_view_image_margin">64dp</dimen>
 
-
 </resources>

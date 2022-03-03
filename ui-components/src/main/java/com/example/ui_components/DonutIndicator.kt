@@ -2,20 +2,15 @@ package com.example.ui_components
 
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Color
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.ContextCompat
 import androidx.core.view.doOnLayout
 import com.google.android.material.progressindicator.CircularProgressIndicator
 
-/**
- * Credit Indicator component
- */
 @Suppress("MemberVisibilityCanBePrivate")
 class DonutIndicator @JvmOverloads constructor(
     context: Context,
@@ -28,7 +23,6 @@ class DonutIndicator @JvmOverloads constructor(
     val value by lazy<TextView> { findViewById(R.id.textviewValue) }
     val indicator by lazy<CircularProgressIndicator> { findViewById(R.id.progressIndicator) }
     private val frame by lazy<FrameLayout> { findViewById(R.id.frame) }
-
 
     private val paint = Paint().apply {
         color = ContextCompat.getColor(this@DonutIndicator.context, R.color.primaryColor)
