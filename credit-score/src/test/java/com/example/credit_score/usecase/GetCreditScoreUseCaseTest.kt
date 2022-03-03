@@ -22,7 +22,7 @@ class GetCreditScoreUseCaseTest {
     }
 
     @Test
-    fun `GIVEN request is successful WHEN invoke is called RETURNS Success`() =
+    fun `given the request is successful when invoke is called then return Success`() =
         runBlocking {
             val expected = GetCreditScoreResult.Success(mockCreditScoreData)
             // GIVEN
@@ -39,7 +39,7 @@ class GetCreditScoreUseCaseTest {
 
 
     @Test
-    fun `GIVEN request is failure WHEN invoke is called RETURNS NoInternet`() =
+    fun `given the request is a failure when invoke is called then return NoInternet`() =
         runBlocking {
             val expected = GetCreditScoreResult.NoInternet
             // GIVEN
@@ -56,7 +56,7 @@ class GetCreditScoreUseCaseTest {
 
 
     @Test
-    fun `GIVEN request is failure WHEN invoke is called RETURNS ServerError`() =
+    fun `given the request is a failure when invoke is called then return ServerError`() =
         runBlocking {
             val expected = GetCreditScoreResult.ServerError
             // GIVEN

@@ -18,7 +18,7 @@ class CreditScoreHubViewModelTest {
     private val creditScoreMapper = mockk<CreditScoreMapper>()
 
     @Test
-    fun `load credit data use case returns Success`() = runBlocking {
+    fun `load credit score data use case returns Success`() = runBlocking {
 
         val overviews = mockGetCreditScoreResultSuccess
         val initialState = CreditScoreHubState()
@@ -55,7 +55,7 @@ class CreditScoreHubViewModelTest {
     }
 
     @Test
-    fun `load credit data use case returns NoInternet`() = runBlocking {
+    fun `load credit score data use case returns NoInternet`() = runBlocking {
         val overviews = mockGetCreditScoreResultNoInternet
         val initialState = CreditScoreHubState()
 
@@ -90,7 +90,7 @@ class CreditScoreHubViewModelTest {
     }
 
     @Test
-    fun `load credit data use case returns ServerError`() = runBlocking {
+    fun `load credit score data use case returns ServerError`() = runBlocking {
         val overviews = mockGetCreditScoreResultServerError
         val initialState = CreditScoreHubState()
 

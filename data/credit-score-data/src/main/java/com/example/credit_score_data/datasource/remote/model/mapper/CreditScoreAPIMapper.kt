@@ -9,7 +9,6 @@ internal class CreditScoreAPIMapper {
         return CreditScoreData(
             score = creditData.creditReportInfo.score,
             maxScoreValue = creditData.creditReportInfo.maxScoreValue
-
         )
     }
 }

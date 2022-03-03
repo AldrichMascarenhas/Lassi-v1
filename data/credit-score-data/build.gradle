@@ -41,4 +41,7 @@ dependencies {
     testImplementation "io.mockk:mockk:$mock_version"
     testImplementation "io.mockk:mockk-agent-jvm:$mock_version"
 
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.9.3")
+
+
 }
