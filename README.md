@@ -10,6 +10,7 @@ Light             |  Dark
 
 # Features
 
+- Dev/Prod Flavours
 - Coroutines
 - Multiple modules
 - Clean Architecture
@@ -191,6 +192,9 @@ The following attributes can be changed for a `CollectionView`:
 | String        | `app:description`                  | Used to set the Description   |
 | Reference     | `app:animSrc`                     | Used to set Lottie Resource   |
 
+# Things I'd improve
 
-
-
+- The UI Tests use sleep to wait for background operations to complete. This is really bad. (really not proud of this one, but there's room for improvement)
+- Add Jacoco for Test Coverage Reporting
+- Add Detekt/Ktlint
+- More Documentation on how to run the app/run tests

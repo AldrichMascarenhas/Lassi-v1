@@ -39,10 +39,6 @@ class CreditScoreHubFragmentPage {
     @JvmField
     val rule = ActivityTestRule(MainActivity::class.java, true, false)
 
-    @Rule
-    @JvmField
-    val instantExecutorRule = InstantTaskExecutorRule()
-
     private val creditScoreIndicator = withId(R.id.creditScoreIndicator)
     private val progressBar = withId(R.id.progressBar)
     private val errorContainer = withId(R.id.errorContainer)
@@ -51,10 +47,8 @@ class CreditScoreHubFragmentPage {
     lateinit var fragmentViewModel: CreditScoreHubViewModel
     private lateinit var module: Module
 
-
     private val getCreditScoreUseCase = mockk<GetCreditScoreUseCase>(relaxed = true)
     private val creditScoreMapper = mockk<CreditScoreMapper>(relaxed = true)
-
 
     @Before
     fun setUp() {
@@ -68,7 +62,6 @@ class CreditScoreHubFragmentPage {
         }
         loadKoinModules(module)
         rule.launchActivity(null)
-
     }
 
     @After
